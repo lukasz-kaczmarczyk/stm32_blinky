@@ -441,6 +441,9 @@ static void MX_GPIO_Init(void)
   EXTI_InitStruct.Mode = LL_EXTI_MODE_EVENT;
   EXTI_InitStruct.Trigger = LL_EXTI_TRIGGER_RISING;
   LL_EXTI_Init(&EXTI_InitStruct);
+  
+  LL_GPIO_SetOutputPin(LD3_GPIO_Port, LD3_Pin);
+  LL_GPIO_SetOutputPin(LD6_GPIO_Port, LD6_Pin);
 
 }
 
@@ -461,7 +464,7 @@ void StartDefaultTask(void const * argument)
     LL_GPIO_TogglePin(LD5_GPIO_Port, LD5_Pin);
     LL_GPIO_TogglePin(LD6_GPIO_Port, LD6_Pin);
     LL_mDelay(500);
-    osDelay(1);
+    //osDelay(1);
   }
   /* USER CODE END 5 */ 
 }
