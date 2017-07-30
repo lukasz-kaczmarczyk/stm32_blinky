@@ -71,10 +71,9 @@
 #define NCS_MEMS_SPI_GPIO_Port GPIOC
 #define MEMS_INT1_Pin LL_GPIO_PIN_1
 #define MEMS_INT1_GPIO_Port GPIOC
+#define MEMS_INT1_EXTI_IRQn EXTI0_1_IRQn
 #define MEMS_INT2_Pin LL_GPIO_PIN_2
 #define MEMS_INT2_GPIO_Port GPIOC
-#define B1_Pin LL_GPIO_PIN_0
-#define B1_GPIO_Port GPIOA
 #define EXT_RESET_Pin LL_GPIO_PIN_5
 #define EXT_RESET_GPIO_Port GPIOC
 #define I2C2_SCL_Pin LL_GPIO_PIN_10
@@ -105,7 +104,8 @@
 #define SWCLK_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
-
+#define MAX_SPEED 100
+#define MIN_SPEED 1000
 /* USER CODE END Private defines */
 
 void _Error_Handler(char *, int);

@@ -56,6 +56,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 osThreadId defaultTaskHandle;
+volatile uint16_t blinkSpeed = 1000;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
@@ -410,7 +411,7 @@ static void MX_GPIO_Init(void)
   LL_GPIO_SetPinPull(MEMS_INT2_GPIO_Port, MEMS_INT2_Pin, LL_GPIO_PULL_NO);
 
   /**/
-  LL_GPIO_SetPinPull(B1_GPIO_Port, B1_Pin, LL_GPIO_PULL_NO);
+  LL_GPIO_SetPinPull(GPIOA, LL_GPIO_PIN_0, LL_GPIO_PULL_NO);
 
   /**/
   LL_GPIO_SetPinMode(MEMS_INT1_GPIO_Port, MEMS_INT1_Pin, LL_GPIO_MODE_INPUT);
@@ -419,7 +420,7 @@ static void MX_GPIO_Init(void)
   LL_GPIO_SetPinMode(MEMS_INT2_GPIO_Port, MEMS_INT2_Pin, LL_GPIO_MODE_INPUT);
 
   /**/
-  LL_GPIO_SetPinMode(B1_GPIO_Port, B1_Pin, LL_GPIO_MODE_INPUT);
+  LL_GPIO_SetPinMode(GPIOA, LL_GPIO_PIN_0, LL_GPIO_MODE_INPUT);
 
   /**/
   EXTI_InitStruct.Line_0_31 = LL_EXTI_LINE_1;
@@ -438,12 +439,13 @@ static void MX_GPIO_Init(void)
   /**/
   EXTI_InitStruct.Line_0_31 = LL_EXTI_LINE_0;
   EXTI_InitStruct.LineCommand = ENABLE;
-  EXTI_InitStruct.Mode = LL_EXTI_MODE_EVENT;
+  EXTI_InitStruct.Mode = LL_EXTI_MODE_IT;
   EXTI_InitStruct.Trigger = LL_EXTI_TRIGGER_RISING;
   LL_EXTI_Init(&EXTI_InitStruct);
-  
-  LL_GPIO_SetOutputPin(LD3_GPIO_Port, LD3_Pin);
-  LL_GPIO_SetOutputPin(LD6_GPIO_Port, LD6_Pin);
+
+  /* EXTI interrupt init*/
+  NVIC_SetPriority(EXTI0_1_IRQn, 3);
+  NVIC_EnableIRQ(EXTI0_1_IRQn);
 
 }
 
@@ -456,6 +458,9 @@ void StartDefaultTask(void const * argument)
 {
 
   /* USER CODE BEGIN 5 */
+  NVIC_EnableIRQ(EXTI0_1_IRQn);
+  LL_GPIO_SetOutputPin(LD3_GPIO_Port, LD3_Pin);
+  LL_GPIO_SetOutputPin(LD6_GPIO_Port, LD6_Pin);
   /* Infinite loop */
   for(;;)
   {
@@ -463,7 +468,7 @@ void StartDefaultTask(void const * argument)
     LL_GPIO_TogglePin(LD4_GPIO_Port, LD4_Pin);
     LL_GPIO_TogglePin(LD5_GPIO_Port, LD5_Pin);
     LL_GPIO_TogglePin(LD6_GPIO_Port, LD6_Pin);
-    LL_mDelay(500);
+    LL_mDelay(blinkSpeed);
     //osDelay(1);
   }
   /* USER CODE END 5 */ 

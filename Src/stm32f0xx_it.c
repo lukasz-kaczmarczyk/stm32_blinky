@@ -43,10 +43,40 @@
 /* External variables --------------------------------------------------------*/
 
 extern TIM_HandleTypeDef htim1;
+extern uint16_t blinkSpeed;
 
 /******************************************************************************/
 /*            Cortex-M0 Processor Interruption and Exception Handlers         */ 
 /******************************************************************************/
+
+/**
+* @brief This function handles Non maskable interrupt.
+*/
+void NMI_Handler(void)
+{
+  /* USER CODE BEGIN NonMaskableInt_IRQn 0 */
+
+  /* USER CODE END NonMaskableInt_IRQn 0 */
+  /* USER CODE BEGIN NonMaskableInt_IRQn 1 */
+
+  /* USER CODE END NonMaskableInt_IRQn 1 */
+}
+
+/**
+* @brief This function handles Hard fault interrupt.
+*/
+void HardFault_Handler(void)
+{
+  /* USER CODE BEGIN HardFault_IRQn 0 */
+
+  /* USER CODE END HardFault_IRQn 0 */
+  while (1)
+  {
+  }
+  /* USER CODE BEGIN HardFault_IRQn 1 */
+
+  /* USER CODE END HardFault_IRQn 1 */
+}
 
 /**
 * @brief This function handles System tick timer.
@@ -70,6 +100,28 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /**
+* @brief This function handles EXTI line 0 and 1 interrupts.
+*/
+void EXTI0_1_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI0_1_IRQn 0 */
+    EXTI->PR |= LL_GPIO_PIN_0;
+    if(MAX_SPEED >= blinkSpeed)
+    {
+      blinkSpeed = MIN_SPEED;
+    }
+    else
+    {
+      blinkSpeed -= MAX_SPEED;
+    }
+  /* USER CODE END EXTI0_1_IRQn 0 */
+  
+  /* USER CODE BEGIN EXTI0_1_IRQn 1 */
+
+  /* USER CODE END EXTI0_1_IRQn 1 */
+}
+
+/**
 * @brief This function handles TIM1 break, update, trigger and commutation interrupts.
 */
 void TIM1_BRK_UP_TRG_COM_IRQHandler(void)
@@ -78,6 +130,7 @@ void TIM1_BRK_UP_TRG_COM_IRQHandler(void)
 
   /* USER CODE END TIM1_BRK_UP_TRG_COM_IRQn 0 */
   HAL_TIM_IRQHandler(&htim1);
+  //EXTI->PR |= 0x01;
   /* USER CODE BEGIN TIM1_BRK_UP_TRG_COM_IRQn 1 */
 
   /* USER CODE END TIM1_BRK_UP_TRG_COM_IRQn 1 */

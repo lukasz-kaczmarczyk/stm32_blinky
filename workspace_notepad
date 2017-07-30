@@ -1,0 +1,170 @@
+<NotepadPlus>
+    <Project name="01_blinky">
+        <Folder name="Drivers">
+            <Folder name="CMSIS">
+                <Folder name="Device">
+                    <Folder name="ST">
+                        <Folder name="STM32F0xx">
+                            <Folder name="Include">
+                                <File name="Drivers\CMSIS\Device\ST\STM32F0xx\Include\stm32f072xb.h" />
+                                <File name="Drivers\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h" />
+                                <File name="Drivers\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h" />
+                            </Folder>
+                            <Folder name="Source">
+                                <Folder name="Templates">
+                                    <Folder name="arm" />
+                                    <File name="Drivers\CMSIS\Device\ST\STM32F0xx\Source\Templates\system_stm32f0xx.c" />
+                                </Folder>
+                            </Folder>
+                        </Folder>
+                    </Folder>
+                </Folder>
+                <Folder name="Include">
+                    <File name="Drivers\CMSIS\Include\arm_common_tables.h" />
+                    <File name="Drivers\CMSIS\Include\arm_const_structs.h" />
+                    <File name="Drivers\CMSIS\Include\arm_math.h" />
+                    <File name="Drivers\CMSIS\Include\cmsis_armcc.h" />
+                    <File name="Drivers\CMSIS\Include\cmsis_armcc_V6.h" />
+                    <File name="Drivers\CMSIS\Include\cmsis_gcc.h" />
+                    <File name="Drivers\CMSIS\Include\core_cm0.h" />
+                    <File name="Drivers\CMSIS\Include\core_cm0plus.h" />
+                    <File name="Drivers\CMSIS\Include\core_cm3.h" />
+                    <File name="Drivers\CMSIS\Include\core_cm4.h" />
+                    <File name="Drivers\CMSIS\Include\core_cm7.h" />
+                    <File name="Drivers\CMSIS\Include\core_cmFunc.h" />
+                    <File name="Drivers\CMSIS\Include\core_cmInstr.h" />
+                    <File name="Drivers\CMSIS\Include\core_cmSimd.h" />
+                    <File name="Drivers\CMSIS\Include\core_sc000.h" />
+                    <File name="Drivers\CMSIS\Include\core_sc300.h" />
+                </Folder>
+            </Folder>
+            <Folder name="STM32F0xx_HAL_Driver">
+                <Folder name="Inc">
+                    <Folder name="Legacy">
+                        <File name="Drivers\STM32F0xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h" />
+                    </Folder>
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal_cortex.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal_def.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal_dma.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal_dma_ex.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal_flash.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal_flash_ex.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal_gpio.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal_gpio_ex.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal_i2c.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal_i2c_ex.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal_pwr.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal_pwr_ex.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal_rcc.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal_rcc_ex.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal_tim.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal_tim_ex.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_bus.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_cortex.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_crs.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_dma.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_exti.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_gpio.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_pwr.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_rcc.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_system.h" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_ll_utils.h" />
+                </Folder>
+                <Folder name="Src">
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal.c" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_cortex.c" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_dma.c" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_flash.c" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_flash_ex.c" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_gpio.c" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_i2c.c" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_i2c_ex.c" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_pwr.c" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_pwr_ex.c" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_rcc.c" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_rcc_ex.c" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_tim.c" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_tim_ex.c" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_ll_exti.c" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_ll_gpio.c" />
+                    <File name="Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_ll_utils.c" />
+                </Folder>
+            </Folder>
+        </Folder>
+        <Folder name="Inc">
+            <File name="Inc\FreeRTOSConfig.h" />
+            <File name="Inc\main.h" />
+            <File name="Inc\stm32f0xx_hal_conf.h" />
+            <File name="Inc\stm32f0xx_it.h" />
+            <File name="Inc\stm32_assert.h" />
+        </Folder>
+        <Folder name="MDK-ARM">
+            <Folder name="01_blinky" />
+            <Folder name="RTE">
+                <Folder name="_01_blinky">
+                    <File name="MDK-ARM\RTE\_01_blinky\RTE_Components.h" />
+                </Folder>
+            </Folder>
+            <File name="MDK-ARM\01_blinky.uvoptx" />
+            <File name="MDK-ARM\01_blinky.uvprojx" />
+            <File name="MDK-ARM\startup_stm32f072xb.s" />
+        </Folder>
+        <Folder name="Middlewares">
+            <Folder name="Third_Party">
+                <Folder name="FreeRTOS">
+                    <Folder name="Source">
+                        <Folder name="CMSIS_RTOS">
+                            <File name="Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c" />
+                            <File name="Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.h" />
+                        </Folder>
+                        <Folder name="include">
+                            <File name="Middlewares\Third_Party\FreeRTOS\Source\include\croutine.h" />
+                            <File name="Middlewares\Third_Party\FreeRTOS\Source\include\deprecated_definitions.h" />
+                            <File name="Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h" />
+                            <File name="Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h" />
+                            <File name="Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOSConfig_template.h" />
+                            <File name="Middlewares\Third_Party\FreeRTOS\Source\include\list.h" />
+                            <File name="Middlewares\Third_Party\FreeRTOS\Source\include\mpu_prototypes.h" />
+                            <File name="Middlewares\Third_Party\FreeRTOS\Source\include\mpu_wrappers.h" />
+                            <File name="Middlewares\Third_Party\FreeRTOS\Source\include\portable.h" />
+                            <File name="Middlewares\Third_Party\FreeRTOS\Source\include\projdefs.h" />
+                            <File name="Middlewares\Third_Party\FreeRTOS\Source\include\queue.h" />
+                            <File name="Middlewares\Third_Party\FreeRTOS\Source\include\semphr.h" />
+                            <File name="Middlewares\Third_Party\FreeRTOS\Source\include\StackMacros.h" />
+                            <File name="Middlewares\Third_Party\FreeRTOS\Source\include\task.h" />
+                            <File name="Middlewares\Third_Party\FreeRTOS\Source\include\timers.h" />
+                        </Folder>
+                        <Folder name="portable">
+                            <Folder name="MemMang">
+                                <File name="Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c" />
+                            </Folder>
+                            <Folder name="RVDS">
+                                <Folder name="ARM_CM0">
+                                    <File name="Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM0\port.c" />
+                                    <File name="Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM0\portmacro.h" />
+                                </Folder>
+                            </Folder>
+                        </Folder>
+                        <File name="Middlewares\Third_Party\FreeRTOS\Source\croutine.c" />
+                        <File name="Middlewares\Third_Party\FreeRTOS\Source\event_groups.c" />
+                        <File name="Middlewares\Third_Party\FreeRTOS\Source\list.c" />
+                        <File name="Middlewares\Third_Party\FreeRTOS\Source\queue.c" />
+                        <File name="Middlewares\Third_Party\FreeRTOS\Source\tasks.c" />
+                        <File name="Middlewares\Third_Party\FreeRTOS\Source\timers.c" />
+                    </Folder>
+                </Folder>
+            </Folder>
+        </Folder>
+        <Folder name="Src">
+            <File name="Src\freertos.c" />
+            <File name="Src\main.c" />
+            <File name="Src\stm32f0xx_hal_msp.c" />
+            <File name="Src\stm32f0xx_hal_timebase_TIM.c" />
+            <File name="Src\stm32f0xx_it.c" />
+            <File name="Src\system_stm32f0xx.c" />
+        </Folder>
+        <File name=".mxproject" />
+        <File name="01_blinky.ioc" />
+    </Project>
+</NotepadPlus>

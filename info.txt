@@ -1,0 +1,9 @@
+led toggle in default thread (main.c) and modify period using ISR (blinkSpeed global variable)
+global variable as extern in *it.c
+  
+button interrupt
+proper place to init pull down - cubemx config
+
+wait loop to solve bouncing problem??, not implemented
+irq handler in stm32f0xx_it.c file
+cleaning pending register
